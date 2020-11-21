@@ -1,1 +1,1 @@
-web: http-server
+web: npm run serve_up

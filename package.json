@@ -7,6 +7,7 @@
     "build_dev": "webpack --mode development",
     "build_prod": "webpack --mode production",
     "postinstall": "npm run build_prod",
+    "serve_up": "http-server",
     "start": "webpack-dev-server --mode development --open"
   },
   "repository": {
