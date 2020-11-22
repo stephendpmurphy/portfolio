@@ -28,6 +28,11 @@
     };
 }
 
+@mixin respond-tablet {
+    @media (max-width: 850px) {
+        @content
+    };
+}
 /*
 $breakpoint args:
 - phone
