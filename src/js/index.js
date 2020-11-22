@@ -1,3 +1,4 @@
+import '../sass/main.scss';
 const confetti = require("canvas-confetti")
 
 var myCanvas = document.getElementById('myCanvas');
