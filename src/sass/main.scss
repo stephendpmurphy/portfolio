@@ -1,5 +1,9 @@
-@import './abstracts/variables';
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
 
-html {
-    background-color: $color-orange;
-}
+@import './abstracts/variables';
+@import './abstracts/mixins';
+
+@import './base/base';
+@import './base/typography';
+
+@import './pages/about';

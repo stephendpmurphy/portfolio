@@ -2,6 +2,7 @@ const path = require('path');
 const htmlWebpackPlugin = require('html-webpack-plugin');
 const extractTextPlugin = require('extract-text-webpack-plugin');
 const miniCssExtractPlugin = require('mini-css-extract-plugin');
+const copyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: './src/js/index.js',
@@ -25,8 +26,12 @@ module.exports = {
                 }
             },
             {
-                test:/\.(s*)css$/,
-                use:[ miniCssExtractPlugin.loader,"css-loader", "sass-loader"],
+                test:/\.scss$/,
+                use: [
+                    miniCssExtractPlugin.loader,
+                    "css-loader",
+                    "sass-loader"
+                ]
             }
         ]
     },
@@ -37,6 +42,15 @@ module.exports = {
         }),
         new miniCssExtractPlugin( {
             filename: 'style/style.css',
+        }),
+        new copyPlugin({
+            patterns: [
+                {
+                    from: "**/*",
+                    context: path.resolve(__dirname, "src", "assets"),
+                    to: "assets"
+                }
+            ],
         })
     ]
 };

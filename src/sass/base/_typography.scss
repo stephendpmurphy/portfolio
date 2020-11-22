@@ -1,0 +1,32 @@
+body {
+    background-color: black;
+    box-sizing: border-box;
+    font-family: $primary-font;
+    font-weight: 400;
+    font-size: $default-font-size;
+    line-height: 1.6;
+    color: $color-grey-dark;
+}
+
+.heading-primary {
+    color: $color-white;
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+    &--main {
+        display: block;
+        font-size: 6rem;
+        font-weight: 400;
+        letter-spacing: 3.5rem;
+
+        animation: moveInLeft 1s ease-out;
+    }
+
+    &--sub {
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 1.75rem;
+
+        animation: moveInRight 1s ease-out;
+    }
+}
