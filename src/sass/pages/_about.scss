@@ -1,13 +1,10 @@
 .about {
     color: white;
-    font-size: 1.7rem;
-    width: 100%;
-    height: 100%;
-    padding-top: 10rem;
+    margin-top: 5rem;
 
     display: flex;
-    justify-content: center;
     flex-direction: row;
+    justify-content: center;
 
     &__div {
         width: 50rem;
@@ -26,16 +23,9 @@
     }
 
     &__intro {
-        color: white;
-
         &-txt {
             margin-bottom: 2rem;
         }
-        // }
-        // // All of the text items should have a bottom margin
-        // :not(:last-child) {
-        //     margin-bottom: 2rem;
-        // }
     }
 
     &__skills {
@@ -45,8 +35,9 @@
     }
 
     @include respond-tablet {
-        &__figure {
+        margin-top: 5rem;
 
+        &__figure {
             &-img {
                 transform: scale(1.8) translate(3.3rem, -2.5rem);
             }
@@ -54,21 +45,17 @@
     }
 
     @include respond-phone {
-        padding-top: 5rem;
-
+        margin-top: 5rem;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
 
         &__div {
-            width: 32rem;
-            padding: 1rem;
+            width: 33rem;
         }
 
         &__figure {
-            width: 100%;
             height: 30rem;
-            overflow: hidden;
 
             &-img {
                 transform: scale(1.8) translate(.3rem, -3rem);

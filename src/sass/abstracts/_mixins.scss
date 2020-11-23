@@ -21,7 +21,6 @@
 1200 - 1800px - PC
 1800px + - Big Desktop
 */
-
 @mixin respond-phone {
     @media (max-width: 600px) {
         @content
@@ -29,39 +28,7 @@
 }
 
 @mixin respond-tablet {
-    @media (max-width: 850px) {
+    @media (max-width: 900px) {
         @content
     };
-}
-/*
-$breakpoint args:
-- phone
-- tab-port
-- tab-land
-- big-desktop
-*/
-@mixin respond($breakpoint) {
-    @if $breakpoint == phone {
-        @media (max-wdith: 37.5em) {
-            @content;
-        };
-    }
-
-    @if $breakpoint == tab-port {
-        @media (max-wdith: 56.25em) {
-            @content;
-        };
-    }
-
-    @if $breakpoint == tab-land {
-        @media (max-wdith: 75em) {
-            @content;
-        };
-    }
-
-    @if $breakpoint == big-desktop {
-        @media (max-wdith: 112.5em) {
-            @content;
-        };
-    }
 }
