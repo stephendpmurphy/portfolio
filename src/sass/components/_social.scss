@@ -1,0 +1,11 @@
+.social {
+    &__icon {
+        width: 40px;
+        height: 40px;
+
+        @include respond-phone {
+            width: 30px;
+            hegith: 30px;
+        }
+    }
+}

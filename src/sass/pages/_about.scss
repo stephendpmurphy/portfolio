@@ -8,7 +8,7 @@
 
     &__div {
         width: 50rem;
-        padding: 2rem;
+        padding: 1rem;
     }
 
     &__figure {
@@ -19,6 +19,31 @@
         &-img {
             width: 30rem;
             transform: scale(2) translateX(5.5rem);
+        }
+    }
+
+    &__social {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-top: 1rem;
+        height: 60px;
+
+        :not(:last-child) {
+            margin-right: 4rem;
+        }
+
+        // :last-child {
+        //     margin-right: 1rem;
+        // }
+
+        @include respond-phone {
+            justify-content: center;
+
+            :not(:last-child) {
+                margin-right: 3rem;
+            }
         }
     }
 
