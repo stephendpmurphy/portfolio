@@ -1,0 +1,31 @@
+.badge {
+    font-size: 90%;
+    border-radius: 3px;
+    text-align: center;
+    min-width: 5rem;
+    padding: 0.5rem 1rem;
+    margin: 0.6rem;
+
+    transition: all .1s;
+
+    &:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+
+    &-noScale {
+        &:hover {
+            transform: none;
+        }
+    }
+
+    &-white {
+        color: black;
+        background-color: white;
+    }
+
+    &-gray {
+        color: white;
+        background-color: $color-grey-dark-3;
+    }
+}
