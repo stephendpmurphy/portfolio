@@ -2,7 +2,7 @@ const axios = require('axios').default;
 import "../sass/main.scss";
 
 const skillsAPI = axios.create({
-    baseURL: 'https://stephenmurphy-backend.herokuapp.com/api/skills',
+    baseURL: 'api.stephendpmurphy.com/skills',
     timeout: 1000,
     method: 'get',
 });
