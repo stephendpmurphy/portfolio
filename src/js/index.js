@@ -1,6 +1,7 @@
 import "../sass/main.scss";
 import axios from 'axios'
 import * as skillView from './view/skillView'
+import * as projectView from './view/projectView';
 
 
 const skillsAPI = axios.create({
@@ -24,7 +25,9 @@ async function retrieveSkills() {
 
 async function retrieveProjects() {
     const resp = await projectsAPI.get('/');
-    console.log(resp.data);
+
+    projectView.clearProjects();
+    projectView.renderProjects(resp.data);
 }
 
 retrieveSkills();

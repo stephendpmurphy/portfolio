@@ -5,10 +5,13 @@
 
 @import './base/base';
 @import './base/typography';
+@import './base//utilities';
 
 @import './components/badge';
 @import './components/social';
+@import './components/project';
 
 @import './pages/about';
 
+@import './layout/projects';
 @import './layout/footer';
