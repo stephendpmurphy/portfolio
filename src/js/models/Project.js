@@ -29,8 +29,10 @@ export default class Project {
         this.markup = `<div class="project">
                             <p class="project__name">${this.project.name}</p>
                             <div class="project__link">
-                                <img class="project__link-figure" src="assets/github.svg">
-                                <a href="${this.project.proj_url}" target="_blank"><p class="project__link-url">${githubProjName}</p></a>
+                                <a href="${this.project.proj_url}" target="_blank">
+                                    <img class="project__link-figure" src="assets/github.svg">
+                                    <p class="project__link-url">${githubProjName}</p>
+                                </a>
                             </div>
                             <p class="project__desc">${this.project.desc}</p>
                             <div class="project__tags">${tagsMarkup}</div>
