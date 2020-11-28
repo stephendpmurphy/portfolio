@@ -1,5 +1,6 @@
 .projects {
     width: 110rem;
+    min-height: 20rem;
 
     &__search {
         background-color: $color-grey-dark-3;
@@ -24,7 +25,9 @@
     }
 
     &__list {
+        position: relative;
         width: 100%;
+        min-height: 10rem;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;

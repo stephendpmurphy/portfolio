@@ -5,6 +5,11 @@
     padding: 1rem 2.5rem;
     background-color: $color-grey-dark-3;
     color: white;
+    transition: all .15s;
+
+    &:hover {
+        transform: scale(1.02);
+    }
 
     &__name{
         font-size: 120%;

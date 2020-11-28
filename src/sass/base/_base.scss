@@ -25,3 +25,30 @@ a {
 a:visited {
     text-decoration: none;
 }
+
+.loader {
+    @include centerOnBlock;
+    &__img {
+        width: 30px;
+        height: 30px;
+        animation: rotate 1.5s infinite linear;
+    }
+
+    &__failed {
+        @include centerOnBlock;
+        font-size: 90%;
+        font-style: italic;
+        color: $color-grey-dark-2;
+    }
+}
+
+@keyframes rotate {
+
+    0% {
+      transform: rotate(0);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+}
