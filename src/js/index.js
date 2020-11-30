@@ -5,19 +5,15 @@ import * as projectView from './view/projectView';
 import { elements, renderLoader, clearLoader, renderFailedToLoad, clearFailedToLoad } from './view/base';
 
 
-const skillsAPI = axios.create({
-    baseURL: 'https://api.stephendpmurphy.com/skills',
-    timeout: 1500,
-    method: 'get',
-});
 
-const projectsAPI = axios.create({
-    baseURL: 'https://api.stephendpmurphy.com/projects',
-    timeout: 1500,
-    method: 'get',
-});
 
 async function retrieveSkills() {
+    const skillsAPI = axios.create({
+        baseURL: 'https://api.stephendpmurphy.com/skills',
+        timeout: 1500,
+        method: 'get',
+    });
+
     try {
         // Display the loader
         renderLoader(elements.skillsList);
@@ -45,6 +41,12 @@ async function retrieveSkills() {
 }
 
 async function retrieveProjects() {
+    const projectsAPI = axios.create({
+        baseURL: 'https://api.stephendpmurphy.com/projects',
+        timeout: 1500,
+        method: 'get',
+    });
+
     try {
         // Display the loader
         renderLoader(elements.projectList);
