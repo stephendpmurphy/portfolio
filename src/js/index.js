@@ -4,9 +4,6 @@ import * as skillView from './view/skillView';
 import * as projectView from './view/projectView';
 import { elements, renderLoader, clearLoader, renderFailedToLoad, clearFailedToLoad } from './view/base';
 
-
-
-
 async function retrieveSkills() {
     const skillsAPI = axios.create({
         baseURL: 'https://api.stephendpmurphy.com/skills',
@@ -57,6 +54,13 @@ async function retrieveProjects() {
             clearLoader(elements.projectList);
             // Results found.. Display them
             projectView.renderProjects(resp.data);
+            // Add all of our event listeners to the projects
+            const expand_btns = document.querySelectorAll('.project__expand');
+            expand_btns.forEach( (el) => {
+                el.addEventListener('click', () => {
+                    el.parentElement.classList.toggle('project__active');
+                })
+            })
         }
         else {
             // Remove the loader

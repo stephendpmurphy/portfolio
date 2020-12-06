@@ -6,6 +6,7 @@
     background-color: $color-grey-dark-3;
     color: white;
     transition: all .15s;
+    position: relative;
 
     &:hover {
         transform: scale(1.02);
@@ -16,6 +17,18 @@
         height: 3rem;
         border-bottom: 2px dotted white;
         margin-bottom: 1rem;
+    }
+
+    &__expand {
+        cursor: pointer;
+        position: absolute;
+        top: 13;
+        right: 30;
+        transition: transform .15s linear;
+
+        height: 0rem;
+        width: 0rem;
+        opacity: 0;
     }
 
     &__link{
@@ -39,37 +52,56 @@
             top: 50%;
             left: 4rem;
             transform: translateY(-50%);
-            color: white;
+            color: #ddd;
         }
     }
 
     &__desc {
         margin-left: 0.5rem;
         height: 6rem;
-        opacity: 1;
+        overflow: hidden;
+        transition: all .3s linear;
     }
 
     &__tags {
         font-weight: 500;
         font-size: 90%;
         height: 3rem;
-        opacity: 1;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        overflow: hidden;
+        transition: all .3s linear;
+    }
+
+    &__active &__desc {
+        height: 12rem;
+        overflow: auto;
+    }
+
+    &__active &__tags {
+        height: 3rem;
+    }
+
+    &__active &__expand {
+        transform: rotate(180deg);
     }
 
     @include respond-phone {
         width: 30rem;
 
+        &__expand {
+            height: 2rem;
+            width: 2rem;
+            opacity: 1;
+        }
+
         &__desc {
             height: 0px;
-            opacity: 0;
         }
 
         &__tags {
             height: 0px;
-            opacity: 0;
         }
     }
 }

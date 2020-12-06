@@ -26,16 +26,19 @@ export default class Project {
         // Extract just the project name from the github url
         var githubProjName = this.project.proj_url.split("https://github.com/stephendpmurphy/")[1];
 
-        this.markup = `<a href="${this.project.proj_url}" target="_blank">
-                            <div class="project">
-                                <p class="project__name">${this.project.name}</p>
-                                <div class="project__link">
-                                        <img class="project__link-figure" src="assets/github.svg">
-                                        <p class="project__link-url">${githubProjName}</p>
-                                </div>
-                                <p class="project__desc">${this.project.desc}</p>
-                                <div class="project__tags">${tagsMarkup}</div>
+        this.markup = `<div class="project">
+                            <p class="project__name">${this.project.name}</p>
+
+                            <div class="project__link">
+                                <img class="project__link-figure" src="assets/github.svg">
+                                <a href="${this.project.proj_url}" target="_blank">
+                                    <p class="project__link-url">${githubProjName}</p>
+                                </a>
                             </div>
-                        </a>`
+
+                            <p class="project__desc">${this.project.desc}</p>
+                            <div class="project__tags">${tagsMarkup}</div>
+                            <img class="project__expand" src="assets/expand.svg">
+                        </div>`
     }
 }
