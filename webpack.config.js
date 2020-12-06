@@ -41,7 +41,7 @@ module.exports = {
             template: './src/index.html'
         }),
         new miniCssExtractPlugin( {
-            filename: 'style/style.css',
+            filename: 'style/style.[chunkhash].css',
         }),
         new copyPlugin({
             patterns: [
