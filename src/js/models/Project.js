@@ -23,9 +23,6 @@ export default class Project {
             tagsMarkup += badge.markup;
         })
 
-        // Extract just the project name from the github url
-        var githubProjName = this.project.proj_url.split("https://github.com/stephendpmurphy/")[1];
-
         this.markup = `<div class="project">
                             <p class="project__name">${this.project.name}</p>
                             <div class="project__desc">
