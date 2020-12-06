@@ -28,16 +28,16 @@ export default class Project {
 
         this.markup = `<div class="project">
                             <p class="project__name">${this.project.name}</p>
-
-                            <div class="project__link">
-                                <img class="project__link-figure" src="assets/github.svg">
-                                <a href="${this.project.proj_url}" target="_blank">
-                                    <p class="project__link-url">${githubProjName}</p>
-                                </a>
+                            <div class="project__desc">
+                                <p class="project__about">${this.project.desc}</p>
+                                <div class="project__link">
+                                    <img class="project__link-figure" src="assets/github.svg">
+                                    <a href="${this.project.proj_url}" target="_blank">
+                                        <p class="project__link-url">View on Github</p>
+                                    </a>
+                                </div>
+                                <div class="project__tags">${tagsMarkup}</div>
                             </div>
-
-                            <p class="project__desc">${this.project.desc}</p>
-                            <div class="project__tags">${tagsMarkup}</div>
                             <img class="project__expand" src="assets/expand.svg">
                         </div>`
     }

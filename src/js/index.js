@@ -55,10 +55,19 @@ async function retrieveProjects() {
             // Results found.. Display them
             projectView.renderProjects(resp.data);
             // Add all of our event listeners to the projects
-            const expand_btns = document.querySelectorAll('.project__expand');
-            expand_btns.forEach( (el) => {
-                el.addEventListener('click', () => {
-                    el.parentElement.classList.toggle('project__active');
+            const projects = document.querySelectorAll('.project');
+            projects.forEach( (proj) => {
+                proj.addEventListener('click', () => {
+                    proj.classList.toggle('project__active');
+                })
+            })
+            // Add an event listener to all of my Github links and
+            // prevent event propogation
+            const githubLinks = document.querySelectorAll('.project__link-url')
+            githubLinks.forEach( (link) => {
+                link.addEventListener('click', (e) => {
+                    // e.preventDefault();
+                    e.stopPropagation();
                 })
             })
         }
