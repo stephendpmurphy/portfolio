@@ -9,10 +9,6 @@
     transition: all .2s ease;
     animation: fadeIn 1s;
 
-    &:hover {
-        transform: translateY(-5px);
-    }
-
     &__name{
         font-size: 120%;
         height: 3rem;
