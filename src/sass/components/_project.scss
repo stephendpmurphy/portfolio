@@ -7,10 +7,10 @@
     color: white;
     position: relative;
     transition: all .2s ease;
-    cursor: pointer;
+    animation: fadeIn 1s;
 
     &:hover {
-        transform: scale(1.02);
+        transform: translateY(-5px);
     }
 
     &__name{
@@ -38,7 +38,7 @@
     }
 
     &__link{
-        width: 100%;
+        width: 20rem;
         height: 3rem;
         margin-bottom: 1rem;
         display: inline-block;
@@ -59,6 +59,11 @@
             left: 3.25rem;
             transform: translateY(-50%);
             color: #ddd;
+        }
+
+        &:hover p{
+            color: #fff;
+            font-weight: 700;
         }
     }
 
