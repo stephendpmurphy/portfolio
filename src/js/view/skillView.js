@@ -1,5 +1,5 @@
 import { elements } from './base'
-import Badge from '../models/Badge';
+import * as badge from '../view/badge';
 
 export const renderSkills = skills => {
     // If the list given to us is empty, then just return
@@ -9,16 +9,10 @@ export const renderSkills = skills => {
     var markup = '';
 
     skills.forEach(element => {
-        // Create a new badge with our provided config
-        const badge = new Badge(element.skill, {
-            color: "gray",
-        });
-
-        // Generate the markup
-        badge.create();
-
-        // Store the generated markup
-        markup += badge.markup;
+        markup += badge.createBadge( {
+            badgeTxt: element.skill,
+            color: "gray"
+        })
     });
 
     elements.skillsList.insertAdjacentHTML('afterbegin', markup);

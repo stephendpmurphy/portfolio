@@ -1,0 +1,50 @@
+.search {
+    display: flex;
+
+    &-header {
+        width: 13rem;
+        overflow: hidden;
+        color: $color-white;
+        font-size: 2.5rem;
+        line-height: 3.5rem;
+        font-weight: 600;
+        margin-right: 1rem;
+        white-space: nowrap;
+        transition: all 0.25s ease-in;
+    }
+
+    &-icon {
+        transform: translateY(19%);
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+    }
+
+    &-field {
+        color: white;
+        margin-left: 1rem;
+        width: 0;
+        opacity: 0;
+        background-color: $color-grey-dark-3;
+        border: 0px;
+        padding: 0.5rem 1.5rem;
+        border-radius: 4px;
+        transition: all 0.25s ease-in;
+    }
+
+    &-active &-header {
+        width: 0px;
+    }
+
+    &-active &-field {
+        width: 93%;
+        opacity: 1;
+    }
+
+    @include respond-phone {
+        &-active &-field {
+            width: 79%;
+            opacity: 1;
+        }
+    }
+}

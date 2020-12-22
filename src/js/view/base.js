@@ -24,6 +24,16 @@ export const clearLoader = () => {
     }
 };
 
+export const renderNoProjects = () => {
+    const emptyProj = `
+        <div class="loader__failed">
+            <p>No projects found with that tag.</p>
+        </div>
+    `;
+
+    elements.projectList.insertAdjacentHTML("afterbegin", emptyProj);
+}
+
 export const renderFailedToLoad = parent => {
     const failed = `
         <div class="loader__failed">

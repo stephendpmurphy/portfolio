@@ -1,18 +1,18 @@
 import axios from 'axios';
 
-export default class Projects {
+export default class Skills {
     constructor() {
     };
 
-    async getProjects() {
-        const projectsAPI = axios.create({
-            baseURL: 'https://api.stephendpmurphy.com/projects',
+    async getSkills() {
+        const skillsAPI = axios.create({
+            baseURL: 'https://api.stephendpmurphy.com/skills',
             timeout: 1500,
             method: 'get',
         });
 
         try {
-            const resp = await projectsAPI.get('/');
+            const resp = await skillsAPI.get('/');
             this.results = resp.data;
         } catch(error) {
             console.log(error);
