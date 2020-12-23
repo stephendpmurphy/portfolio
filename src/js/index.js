@@ -131,6 +131,9 @@ const setupSearchEvents = () => {
     searchIcon.addEventListener('click', () => {
         const search = document.querySelector('.search');
         search.classList.toggle('search-active');
+        // Focus on the text field input
+        const searchField = document.querySelector('.search-field');
+        searchField.focus();
     })
 
     //setup before functions
@@ -171,7 +174,11 @@ function hashChangeFunc() {
     // Set the current field value to our hash
     const query = window.location.hash.replace('#', '');
     let searchInput = document.querySelector('.search-field');
-    searchInput.value = query;
+    searchInput.value = query.toLowerCase();
+
+    // Focus on the text field input
+    const searchField = document.querySelector('.search-field');
+    searchField.focus();
 
     // Render the new value
     controlProjects();
