@@ -2,28 +2,6 @@
     width: 110rem;
     min-height: 20rem;
 
-    &__search {
-        background-color: $color-grey-dark-3;
-        border-radius: 50px;
-        padding: 1.5rem 2.5rem;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-        width: 100rem;
-
-        &-input {
-            background-color: $color-grey-dark-3;
-            color: $color-white;
-            font-size: 1.6srem;
-            height: 2.5rem;
-            width: 100%;
-            border: none;
-
-            &:focus {
-                outline: none;
-            }
-        }
-    }
-
     &__list {
         position: relative;
         width: 100%;

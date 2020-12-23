@@ -44,9 +44,6 @@ async function controlProjects() {
         // Clear the projects view
         projectView.clearProjects();
 
-        // Projects query string
-        const query = window.location.hash.replace('#', '');
-
         // Create a new instance of our projects class
         state.projects = new Project();
 
@@ -56,17 +53,23 @@ async function controlProjects() {
         // Retrieve our projects
         await state.projects.getProjects();
 
+        // Retrieve the current location hash to use as our query string
+        const query = window.location.hash.replace('#', '');
+
         // Filter our projects list if a query string was given
         if( query !== '' ) {
             state.projectsForDisplay = filterProjects(state.projects.results, query);
         }
         else {
+            // No query given, set our projectsForDisplay as our
+            // initial API results
             state.projectsForDisplay = state.projects.results;
         }
 
         // Clear the loader
         clearLoader(elements.projectList);
 
+        // If any projects were given for display
         if( state.projectsForDisplay.length > 0 ) {
             // Results found.. Display them
             projectView.renderProjects(state.projectsForDisplay);
@@ -89,13 +92,13 @@ async function controlProjects() {
             })
         }
         else {
+            // No projects are available for display
             console.log("no projects to render");
-            // No projects found. Render failed to load
+            // No projects found. Render a message.
             renderNoProjects();
         }
     }
     catch(err) {
-        console.log(err);
         // Remove the loader
         clearLoader(elements.projectList);
         // No projects found. Render failed to load
@@ -148,7 +151,6 @@ const setupSearchEvents = () => {
             typingTimer = setTimeout(doneTyping, doneTypingInterval);
         }
         else {
-            console.log("input empty!");
             doneTyping();
         }
     });
@@ -162,7 +164,6 @@ function doneTyping () {
 }
 
 function hashChangeFunc() {
-    console.log("hash change!");
     // If the search bar is not active.. Then make it active and then set the current value
     // to our new hash
     const search = document.querySelector('.search');
@@ -183,7 +184,6 @@ function hashChangeFunc() {
     // Render the new value
     controlProjects();
 
-    console.log("Scrolling to the search bar");
     // Scroll to the projects div to display as many as possible.
     document.querySelector('.projects__list').scrollIntoView({
         behavior: 'smooth',
