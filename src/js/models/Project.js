@@ -6,7 +6,7 @@ export default class Projects {
 
     async getProjects() {
         const projectsAPI = axios.create({
-            baseURL: 'https://api.stephendpmurphy.com/projects',
+            baseURL: 'http://api.stephendpmurphy.com/projects',
             timeout: 1500,
             method: 'get',
         });

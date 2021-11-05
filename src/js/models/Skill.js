@@ -6,7 +6,7 @@ export default class Skills {
 
     async getSkills() {
         const skillsAPI = axios.create({
-            baseURL: 'https://api.stephendpmurphy.com/skills',
+            baseURL: 'http://api.stephendpmurphy.com/skills',
             timeout: 1500,
             method: 'get',
         });
