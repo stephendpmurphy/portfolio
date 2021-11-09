@@ -6,7 +6,7 @@ export default class Skills {
 
     async getSkills() {
         const skillsAPI = axios.create({
-            baseURL: 'http://api.stephendpmurphy.com/skills',
+            baseURL: 'https://stephenmurphy-backend.herokuapp.com/skills',
             timeout: 1500,
             method: 'get',
         });

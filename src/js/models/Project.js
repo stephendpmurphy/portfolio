@@ -6,7 +6,7 @@ export default class Projects {
 
     async getProjects() {
         const projectsAPI = axios.create({
-            baseURL: 'http://api.stephendpmurphy.com/projects',
+            baseURL: 'https://stephenmurphy-backend.herokuapp.com/projects',
             timeout: 1500,
             method: 'get',
         });
