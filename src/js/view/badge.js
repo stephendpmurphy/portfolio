@@ -15,7 +15,7 @@ export const createBadge = (config) => {
         }
     }
     // Populate the txt field
-    const markup = `<a href="#${config.badgeTxt}" class="badge ${classConfig}">${config.badgeTxt}</a>`;
+    const markup = `<p class="badge ${classConfig}">${config.badgeTxt}</p>`;
 
     // Return the generated markup
     return markup;
