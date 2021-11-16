@@ -12,7 +12,7 @@ export const renderProjects = projects => {
     projects.forEach(project => {
         tagsMarkup = '';
 
-        project.tags.forEach( tag => {
+        project.topics.forEach( tag => {
             tagsMarkup += badge.createBadge( {
                 badgeTxt: tag,
                 color: "white",
@@ -25,10 +25,10 @@ export const renderProjects = projects => {
         markup += `<div class="project">
                         <p class="project__name">${project.name}</p>
                         <div class="project__desc">
-                            <p class="project__about">${project.desc}</p>
+                            <p class="project__about">${project.description}</p>
                             <div class="project__link">
                                 <img class="project__link-figure" src="assets/github.svg">
-                                <a href="${project.proj_url}" target="_blank">
+                                <a href="${project.url}" target="_blank">
                                     <p class="project__link-url">View on Github</p>
                                 </a>
                             </div>

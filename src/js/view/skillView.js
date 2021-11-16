@@ -8,9 +8,9 @@ export const renderSkills = skills => {
     // Create an empty markup var to hold all of the html we are about to create
     var markup = '';
 
-    skills.forEach(element => {
+    skills.forEach(i => {
         markup += badge.createBadge( {
-            badgeTxt: element.skill,
+            badgeTxt: i,
             color: "gray"
         })
     });

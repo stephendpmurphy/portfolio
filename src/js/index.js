@@ -27,7 +27,7 @@ async function controlSkills() {
         }
         else {
             // No skill found. Render failed to load
-            renderFailedToLoad(elements.projectList);
+            renderFailedToLoad(elements.skillsList);
         }
     }
     catch(err) {
@@ -35,7 +35,7 @@ async function controlSkills() {
         // Clear the loader
         clearLoader(elements.skillsList);
         // No skill found. Render failed to load
-        renderFailedToLoad(elements.projectList);
+        renderFailedToLoad(elements.skillsList);
     }
 }
 

@@ -6,14 +6,14 @@ export default class Skills {
 
     async getSkills() {
         const skillsAPI = axios.create({
-            baseURL: 'https://stephenmurphy-backend.herokuapp.com/skills',
+            baseURL: 'https://api.github.com/repos/stephendpmurphy',
             timeout: 1500,
             method: 'get',
         });
 
         try {
-            const resp = await skillsAPI.get('/');
-            this.results = resp.data;
+            const {data} = await skillsAPI.get('/stephendpmurphy');
+            this.results = data.topics;
         } catch(error) {
             console.log(error);
         }
