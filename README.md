@@ -1,18 +1,23 @@
-# Personal Portfolio
-This is my personal portfolio! This project acts as a means of displaying my skills and current projects to the world and to also practice and learn new concepts in Web design! This project uses HTML, JS and SASS. No front-end framework business just yet since I wanted to really learn and hone my Vanilla JS skillz.
+# Next.js + Tailwind CSS Example
 
-## Getting Started
-The source can be retrieved from Github.
+This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.0)](https://tailwindcss.com/blog/tailwindcss-v3) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+
+## Deploy your own
+
+Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+
+## How to use
+
+Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+
 ```bash
-$ git clone https://github.com/stephendpmurphy/portfolio.git
+npx create-next-app --example with-tailwindcss with-tailwindcss-app
+# or
+yarn create next-app --example with-tailwindcss with-tailwindcss-app
+# or
+pnpm create next-app -- --example with-tailwindcss with-tailwindcss-app
 ```
 
-To begin, we need to first install the project Node dependencies.
-```bash
-$ npm install
-```
-
-Once we have our dependencies, we can serve up the web page on local host. This command will also watch all of the source files for any changes and exectue a live-reload as they are made!
-```bash
-$ npm start
-```
+Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
