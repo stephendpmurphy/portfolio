@@ -3,11 +3,11 @@ import {LightningBoltIcon} from '@heroicons/react/solid'
 
 function ProjectCard({projectTitle, projectDesc, projectUrl}) {
   return (
-    <div onClick={() => window.open(`${projectUrl}`)} className="group flex flex-col text-white px-5 py-1 m-3 w-80 h-40 bg-primary-gray rounded cursor-pointer">
+    <div onClick={() => window.open(`${projectUrl}`)} className="transition-all duration-200 hover:-translate-y-2 group flex flex-col text-white px-5 py-1 m-3 w-80 h-40 bg-primary-gray rounded cursor-pointer">
         <div className="text-lg mb-2">
             <p>{projectTitle}</p>
         </div>
-        <div className="text-sm h-full">
+        <div className="text-sm text-zinc-300 h-full">
             <p className="overflow-clip overflow-hidden h-20">{projectDesc}</p>
         </div>
         <div className="text-sm mb-2 pt-1 flex flex-row group">

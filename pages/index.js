@@ -77,9 +77,18 @@ const Home = () => {
             <title>Stephen Murphy | Embedded Software Engineer</title>
             <link rel="icon" href="/favicon.ico" />
         </Head>
-        <main>
-            {/* {renderSkills()} */}
-            {renderProjects()}
+        <main className='bg-black h-screen overflow-y-auto flex flex-col items-center justify-around text-white'>
+            <div className="grid border-2 grid-cols-2">
+                <div>
+
+                </div>
+                <div className="flex flex-wrap">
+                    {renderSkills()}
+                </div>
+            </div>
+            <div className="grow w-full border-2 grid grid-cols-1 lg:grid-cols-3">
+                {renderProjects()}
+            </div>
             <Footer/>
         </main>
     </div>
