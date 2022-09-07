@@ -6,7 +6,7 @@ export default class Projects {
 
     async getProjects() {
         const projectsAPI = axios.create({
-            baseURL: 'https://portfolio-backend-ecru.vercel.app/api/projects',
+            baseURL: 'https://api.stephendpmurphy.com/api/projects',
             timeout: 1500,
             method: 'get',
         });
